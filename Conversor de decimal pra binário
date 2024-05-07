@@ -1,0 +1,13 @@
+#conversor de base decimal para binário
+num = int(input("Digite um númeo inteiro em base decimal para ser convertido em base binária: "))
+numero_selencionado = num
+quociente = 1
+lista = []
+while quociente >= 1:
+    resto = num % 2
+    lista.insert(0, resto)
+    quociente = num // 2
+    num = quociente
+
+    binario = ''.join([str(item) for item in lista])
+print("{} convertido em binário é {}".format(numero_selencionado, binario))
