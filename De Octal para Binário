@@ -31,4 +31,5 @@ mil_3 = int(mil_1 /2)
 mil_4 = int(mil_1 % 2) 
 mil_5 = int(mil_3 /2) 
 mil_6 = int(mil_3 % 2)
-print(f"A resposta é {mil_6}{mil_4}{mil_2}{cen_6}{cen_4}{cen_2}{dez_6}{dez_4}{dez_2}{uni_6}{uni_4}{uni_2}")
+
+print(f"O número digitado em octal foi: {milhar}{centena}{dezena}{unidade}, ele em binário é {mil_6}{mil_4}{mil_2}{cen_6}{cen_4}{cen_2}{dez_6}{dez_4}{dez_2}{uni_6}{uni_4}{uni_2}")
