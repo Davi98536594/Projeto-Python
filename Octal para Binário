@@ -1,0 +1,34 @@
+print("Digite o nùmero correspondente se é unidade, centena, dezena, e aperte enter")
+print("Se alguma casa não ter, experimente botar um 0, e apertar enter")
+unidade = int(input("Digite uma unidade "))#testes 
+uni_1 = int(unidade / 2 ) 
+uni_2 = int(unidade % 2) 
+uni_3 = int(uni_1 /2) 
+uni_4 = int(uni_1 % 2) 
+uni_5 = int(uni_3 /2) 
+uni_6 = int(uni_3 %2) 
+
+dezena = int(input("Digite uma dezena "))#testes 
+dez_1 = int(dezena / 2 ) 
+dez_2 = int(dezena % 2) 
+dez_3 = int(dez_1 /2) 
+dez_4 = int(dez_1 % 2) 
+dez_5 = int(dez_3 /2) 
+dez_6 = int(dez_3 % 2) 
+
+centena = int(input("Digite uma centena "))#testes 
+cen_1 = int(centena / 2 ) 
+cen_2 = int(centena % 2) 
+cen_3 = int(cen_1 /2) 
+cen_4 = int(cen_1 % 2) 
+cen_5 = int(cen_3 /2) 
+cen_6 = int(cen_3 % 2)
+
+milhar = int(input("Digite um milhar "))#testes 
+mil_1 = int(milhar / 2 ) 
+mil_2 = int(milhar % 2) 
+mil_3 = int(mil_1 /2) 
+mil_4 = int(mil_1 % 2) 
+mil_5 = int(mil_3 /2) 
+mil_6 = int(mil_3 % 2)
+print(f"A resposta é {mil_6}{mil_4}{mil_2}{cen_6}{cen_4}{cen_2}{dez_6}{dez_4}{dez_2}{uni_6}{uni_4}{uni_2}")
