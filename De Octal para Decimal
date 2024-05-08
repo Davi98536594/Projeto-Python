@@ -1,0 +1,11 @@
+print("Digite o nùmero correspondente a unidade, centena, dezena, e milhar, e aperte enter")#transforma um número octal em decimal.
+unidade = int(input("Digite a unidade: "))
+dezena = int(input("Digite a dezena: "))
+centena = int(input("Digite a centena: "))
+milhar = int(input("Digite o milhar: "))
+unidade_total = unidade * 8 ** 0
+dezena_total = dezena * 8 ** 1
+centena_total = centena * 8 ** 2
+milhar_total = milhar * 8 ** 3
+soma = unidade_total + dezena_total + centena_total + milhar_total
+print(f'O número digitado em octal foi {milhar}{centena}{dezena}{unidade}, e ele em decimal é {soma}') 
