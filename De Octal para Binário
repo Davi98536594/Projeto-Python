@@ -41,4 +41,4 @@ elif dezena >0:
 elif unidade >0:
     print(f"A resposta é {uni_6}{uni_4}{uni_2}")
 else:
-    print("errado")
+    print("Digite um número")
