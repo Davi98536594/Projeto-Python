@@ -1,11 +1,13 @@
-print("Digite o nùmero correspondente a unidade, centena, dezena, e milhar, e aperte enter")#transforma um número octal em decimal.
-unidade = int(input("Digite a unidade: "))
-dezena = int(input("Digite a dezena: "))
-centena = int(input("Digite a centena: "))
-milhar = int(input("Digite o milhar: "))
-unidade_total = unidade * 8 ** 0
-dezena_total = dezena * 8 ** 1
-centena_total = centena * 8 ** 2
-milhar_total = milhar * 8 ** 3
-soma = unidade_total + dezena_total + centena_total + milhar_total
-print(f'O número digitado em octal foi {milhar}{centena}{dezena}{unidade}, e ele em decimal é {soma}') 
+def octal_para_decimal(numero_octal):
+    decimal = 0
+    expoente = len(numero_octal) - 1
+    
+    for digito in numero_octal:
+        decimal += int(digito) * (8 ** expoente)
+        expoente -= 1
+    
+    return decimal
+
+numero_octal = input("Digite um número octal: ")
+resultado_decimal = octal_para_decimal(numero_octal)
+print("O número decimal correspondente é:", resultado_decimal)
