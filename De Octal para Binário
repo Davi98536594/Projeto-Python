@@ -1,7 +1,7 @@
 def octal_para_binario(octal_str):
     decimal_num = int(octal_str, 8)
     
-    binario_str = bin(decimal_num)[2:]  # O [2:] remove o prefixo '0b'
+    binario_str = bin(decimal_num)[2:]
     
     return binario_str
 
