@@ -103,9 +103,9 @@ def convert_number(entry_widget, from_base, to_base):
     elif to_base_val == "Binario":
         result = converter_decimal_pra_binario(decimal_num)
     elif to_base_val == "Octal":
-        result = decimal_tranformando_octal(decimal_num)
+        result = dec_pra_octal(decimal_num)
     elif to_base_val == "Hexadecimal":
-        result = decimal_to_hex(decimal_num)
+        result = dec_pra_hexa(decimal_num)
     else:
         print("Por favor, selecione uma base de saida")
         result_label.config(text="Result: ")

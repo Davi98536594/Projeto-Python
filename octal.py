@@ -7,4 +7,4 @@ def octal_to_decimal(octal_str):
     decimal_integer = int(integer_part, 8)
     decimal_fraction = sum(int(digit) * 8 ** -(index + 1) for index, digit in enumerate(fractional_part))
 
-    return decimal_integer + decimal_fraction
+    return decimal_integer #+ decimal_fraction
