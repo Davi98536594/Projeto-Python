@@ -1,0 +1,9 @@
+def hexadecimal_para_binario(numero_hex):
+
+    decimal = int(numero_hex, 16)
+    binario = bin(decimal).replace("0b", "")
+    return binario
+
+numero_hexadecimal = input("Digite um número hexadecimal: ")
+resultado_binario = hexadecimal_para_binario(numero_hexadecimal)
+print(f"O número transformado em binário é: {resultado_binario}")
