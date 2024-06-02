@@ -1,7 +1,8 @@
-def bin_pra_octal(num_bin):
-    num_dec = int(num_bin, 2)  
-    octal = oct(num_dec).replace('0o', '') 
-    return octal
+def binario_para_octal(binario):
+    decimal = int(binario, 2)
+    octal = oct(decimal)
+    return octal[2:]  #
 
-num_bin = input("Digite um número binário: ")
-print("O número octal correspondente é:", bin_pra_octal(num_bin))
+binario = input("Digite um número binário para converter em octal: ")
+resultado_octal = binario_para_octal(binario)
+print(f'Binário: {binario} -> Octal: {resultado_octal}')
