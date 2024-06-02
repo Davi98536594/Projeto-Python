@@ -1,29 +1,7 @@
+def bin_pra_octal(num_bin):
+    num_dec = int(num_bin, 2)  
+    octal = oct(num_dec).replace('0o', '') 
+    return octal
 
-binario = input("Digite um número binário: ")
-
-
-if not all(char in '01' for char in binario):
-    print("Entrada inválida. Por favor, digite apenas números binários (0 e 1).")
-else:
-    
-    decimal = 0
-    potencia = 0
-    binario_int = int(binario)  
-
-    while binario_int > 0:
-        ultimo_digito = binario_int % 10
-        decimal += ultimo_digito * (2 ** potencia)
-        potencia += 1
-        binario_int //= 10
-
-    
-    if decimal == 0:
-        octal = '0'
-    else:
-        octal = ''
-        while decimal > 0:
-            octal = str(decimal % 8) + octal
-            decimal //= 8
-
-    
-    print("O número octal correspondente é:", octal)
+num_bin = input("Digite um número binário: ")
+print("O número octal correspondente é:", bin_pra_octal(num_bin))
