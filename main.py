@@ -2,6 +2,10 @@ import tkinter as tk
 from tkinter import ttk
 
 from octal import *
+from Dec_Pra_Hexa import *
+from Binario_Pra_Dec import *
+from dec_para_bin import *
+from dec_para_octal import *
 
 root = tk.Tk()
 root.title("Conversores de Bases")
@@ -63,7 +67,7 @@ def convert_number(entry_widget, from_base, to_base):
             print("entradas binarias devem consistir apenas de digitos 0 e 1")
             result_label.config(text="Result: ")
             return
-        decimal_num = binary_to_decimal(number_str)
+        decimal_num = binario_para_decimal(number_str)
     elif from_base_val == "Octal":
         if not is_valid_number(number_str, '01234567.'):
             print("entradas octais devem consistir apenas de digitos 0-7")
@@ -97,9 +101,9 @@ def convert_number(entry_widget, from_base, to_base):
     if to_base_val == "Decimal":
         result = str(decimal_num)
     elif to_base_val == "Binario":
-        result = decimal_to_binary(decimal_num)
+        result = converter_decimal_pra_binario(decimal_num)
     elif to_base_val == "Octal":
-        result = decimal_to_octal(decimal_num)
+        result = decimal_tranformando_octal(decimal_num)
     elif to_base_val == "Hexadecimal":
         result = decimal_to_hex(decimal_num)
     else:
