@@ -1,38 +1,19 @@
-binario = input("Digite um número binário: ")
-
-decimal = 0
-potencia = 0
-
-
-is_valid = True
-
-
-index = 0
-while index < len(binario):
-    char = binario[index]
-    if char == '0' or char == '1':
-        decimal = decimal * 2 + int(char)
+def dec_pra_hexa(numero):
+    if numero < 0:
+        return "Número inválido"
+    elif numero == 0:
+        return "0"
     else:
-        is_valid = False
-        break
-    index += 1
-
-
-if is_valid:
-   
-    if decimal == 0:
-        hexadecimal = '0'
-    else:
-        hexadecimal = ''
-        while decimal > 0:
-            remainder = decimal % 16
-            if remainder < 10:
-                hexadecimal = str(remainder) + hexadecimal
+        hexadecimal = ""
+        while numero > 0:
+            resto = numero % 16
+            if resto < 10:
+                hexadecimal = str(resto) + hexadecimal
             else:
-                
-                hexadecimal = chr(remainder - 10 + ord('A')) + hexadecimal
-            decimal //= 16
-            
-    print("O número hexadecimal correspondente é:", hexadecimal)
-else:
-    print("Entrada inválida. Por favor, digite apenas números binários (0 e 1).")
+                hexadecimal = chr(ord('A') + resto - 10) + hexadecimal
+            numero //= 16
+        return hexadecimal
+
+# Exemplo de uso:
+num_dec = int(input("Digite um número decimal: "))
+print("O número hexadecimal correspondente é:", dec_pra_hexa(num_dec))
