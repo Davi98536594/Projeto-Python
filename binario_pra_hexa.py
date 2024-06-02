@@ -1,7 +1,8 @@
-def binario_para_hexadecimal(num_bin):
-    numero_decimal = int(num_bin, 2)  
-    hexadecimal = hex(numero_decimal).upper()[2:]  
-    return hexadecimal
+def binario_para_hexadecimal(binario):
+    decimal = int(binario, 2)
+    hexadecimal = hex(decimal)
+    return hexadecimal[2:]  
 
-num_bin = input("Digite um número binário: ")
-print("O número hexadecimal correspondente é:", binario_para_hexadecimal(num_bin))
+binario = input("Digite um número binário para converter em hexadecimal: ")
+resultado_hexadecimal = binario_para_hexadecimal(binario)
+print(f'Binário: {binario} -> Hexadecimal: {resultado_hexadecimal}')
