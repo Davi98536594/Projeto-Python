@@ -1,0 +1,9 @@
+def hexadecimal_para_octal(numero_hex):
+
+    decimal = int(numero_hex, 16)
+    octal = oct(decimal).replace("0o", "")  
+    return octal
+
+numero_hexadecimal = input("Digite um número hexadecimal: ")
+resultado_octal = hexadecimal_para_octal(numero_hexadecimal)
+print(f"O numero transformado em octal é: {resultado_octal}")
